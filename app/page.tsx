@@ -9,9 +9,6 @@ export default function Home() {
       <div className="relative z-10 w-full max-w-2xl">
         <ProfileCard />
       </div>
-
-      {/* Gradient overlay for depth */}
-      <div className="fixed inset-0 -z-5 bg-gradient-to-b from-background/50 via-background/30 to-background/50 pointer-events-none" />
     </main>
   )
 }

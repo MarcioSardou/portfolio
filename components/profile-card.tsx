@@ -1,7 +1,7 @@
 "use client"
 import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { Download, Linkedin, Github, Mail } from "lucide-react"
+import { Download, Linkedin} from "lucide-react"
 import Image from "next/image"
 
 export function ProfileCard() {
@@ -36,7 +36,7 @@ export function ProfileCard() {
   }
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto" style={{ perspective: "1500px" }}>
+    <div  style={{ perspective: "1500px" }}>
       <div
         ref={cardRef}
         className="relative transition-all duration-200 ease-out"
@@ -61,7 +61,7 @@ export function ProfileCard() {
 
         {/* Main Card */}
         <div
-          className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-700/50 overflow-hidden"
+          className="relative bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-10 border border-slate-700/50 overflow-hidden"
           style={{
             transform: "translateZ(0)",
           }}
@@ -123,7 +123,7 @@ export function ProfileCard() {
               <div className="flex items-center justify-center gap-2 text-sm text-slate-500">
                 <span>5+ anos de experiência</span>
                 <span>•</span>
-                <span>React • Node.js • TypeScript</span>
+                <span>ReactJS • Node.js • Next.js • TypeScript</span>
               </div>
             </div>
 
@@ -140,28 +140,6 @@ export function ProfileCard() {
               <span className="text-green-400 font-semibold">acessíveis</span> usando as
               melhores tecnologias do mercado.
             </p>
-
-            {/* Stats */}
-            {/* <div
-              className="grid grid-cols-3 gap-4 md:gap-6 w-full max-w-md mt-2"
-              style={{
-                transform: "translateZ(25px)",
-              }}
-            >
-              <div className="text-center p-3 md:p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-sm hover:bg-slate-700/60 transition-colors">
-                <div className="text-2xl font-bold text-blue-400">15+</div>
-                <div className="text-xs text-slate-400 mt-1">Projetos</div>
-              </div>
-              <div className="text-center p-3 md:p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-sm hover:bg-slate-700/60 transition-colors">
-                <div className="text-2xl font-bold text-purple-400">5+</div>
-                <div className="text-xs text-slate-400 mt-1">Anos Exp.</div>
-              </div>
-              <div className="text-center p-3 md:p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 backdrop-blur-sm hover:bg-slate-700/60 transition-colors">
-                <div className="text-2xl font-bold text-green-400">10+</div>
-                <div className="text-xs text-slate-400 mt-1">Empresas</div>
-              </div>
-            </div> */}
-
             {/* Action Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto mt-4"
@@ -181,36 +159,14 @@ export function ProfileCard() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="gap-2 bg-slate-800/60 border-slate-700 hover:bg-slate-700/60 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+                className="gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
                 onClick={() => {
-                  window.open("https://linkedin.com/in/yourprofile", "_blank")
+                  window.open("https://linkedin.com/in/marcioSardou", "_blank")
                 }}
               >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </Button>
-            </div>
-
-            {/* Social Links */}
-            <div
-              className="flex items-center gap-4 mt-2"
-              style={{
-                transform: "translateZ(30px)",
-              }}
-            >
-              <button
-                className="p-2 rounded-lg bg-slate-800/60 border border-slate-700/60 hover:bg-slate-700/60 hover:border-slate-600 transition-all duration-300 group"
-                onClick={() => window.open("https://github.com/yourprofile", "_blank")}
-              >
-                <Github className="w-5 h-5 text-slate-400 group-hover:text-slate-200 transition-colors" />
-              </button>
-              <button
-                className="p-2 rounded-lg bg-slate-800/60 border border-slate-700/60 hover:bg-slate-700/60 hover:border-slate-600 transition-all duration-300 group"
-                onClick={() => window.open("mailto:your.email@example.com")}
-              >
-                <Mail className="w-5 h-5 text-slate-400 group-hover:text-slate-200 transition-colors" />
-              </button>
             </div>
           </div>
         </div>
